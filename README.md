@@ -1,36 +1,49 @@
-# Personal Portfolio Website in React
+# 🌐 Personal Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to my personal portfolio! This repository showcases my web development projects and skills.
 
-<img width="1266" alt="Screen Shot 2022-06-19 at 2 18 18 PM" src="https://user-images.githubusercontent.com/50160672/174933373-1ba6cadf-1c9a-48c3-aa58-984d0bd62d82.png">
+---
 
-Built using:
+## 👨‍💻 About Me
 
-- Front-end library: React
-- CSS framework: React-bootstrap
-- CSS animations library: Animate.css
+I am an undergraduate in cyber security and a passionate web developer. I build responsive web applications using modern technologies like HTML, CSS, JavaScript, React, and Java, with strong knowledge in MySQL database design.
 
-In the /personal-portfolio, you can run:
+---
 
-### `npm start`
+## 🚀 Projects
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Portfolio Website** – A personal website to showcase my work  
+- **Driving School Registration and Scheduling System** – A system for managing student registrations and scheduling driving sessions  
+- **Flight Ticket Reservation System** – A system for booking and managing flight tickets  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🛠️ Skills
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- HTML  
+- CSS  
+- JavaScript  
+- React  
+- Java  
+- MySQL  
+- Git & GitHub  
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📸 Preview
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Portfolio Screenshot](./assets/portfolio-preview.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
+
+## 🔗 Live Demo
+
+(Add your deployed website link here — e.g., GitHub Pages / Netlify)
+
+---
+
+## 📬 Contact
+
+- Email: hasindudinujaya2003@gmail.com  
+- GitHub: http://github.com/Hasindu-De-Silva  
+- LinkedIn: https://www.linkedin.com/in/hasindu777  
