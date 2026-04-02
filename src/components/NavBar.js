@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import logo from '../assets/img/hasindu-logo.png';
-import navIcon1 from '../assets/img/nav-icon1.svg';
-import navIcon2 from '../assets/img/nav-icon2.svg';
-import navIcon3 from '../assets/img/nav-icon3.svg';
+import { Linkedin, Github, EnvelopeFill } from 'react-bootstrap-icons';
 import { HashLink } from 'react-router-hash-link';
 import {
   BrowserRouter as Router
@@ -13,8 +11,8 @@ export const NavBar = () => {
 
   const [activeLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
-  const githubUrl = "http://github.com/Hasindu-De-Silva";
   const linkedinUrl = "http://linkedin.com/in/hasindu777";
+  const githubUrl = "http://github.com/Hasindu-De-Silva";
   const emailUrl = "mailto:hasindudinujaya2003@gmail.com";
 
   useEffect(() => {
@@ -53,9 +51,9 @@ export const NavBar = () => {
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-                <a href={githubUrl} target="_blank" rel="noreferrer"><img src={navIcon1} alt="" /></a>
-                <a href={linkedinUrl} target="_blank" rel="noreferrer"><img src={navIcon2} alt="" /></a>
-                <a href={emailUrl}><img src={navIcon3} alt="" /></a>
+                <a href={linkedinUrl} target="_blank" rel="noreferrer"><Linkedin color="white" /></a>
+                <a href={githubUrl} target="_blank" rel="noreferrer"><Github color="white" /></a>
+                <a href={emailUrl}><EnvelopeFill color="white" /></a>
               </div>
               <HashLink to='#connect'>
                 <button className="vvd"><span>Let’s Connect</span></button>

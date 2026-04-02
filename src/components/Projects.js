@@ -13,11 +13,13 @@ export const Projects = () => {
       title: "Driving School Registration & Scheduling System",
       description: "Student registration + instructor scheduling (Java). Scheduling for lesson management.",
       imgUrl: projImg1,
+      link: "https://github.com/Hasindu-De-Silva/Driving-Learners-Management-System.git"
     },
     {
       title: "Flight Ticket Reservation System",
       description: "Full-stack booking with Java, HTML, CSS, JavaScript, and MySQL. Seat allocation + fare calculation.",
       imgUrl: projImg2,
+      link: "https://github.com/Hasindu-De-Silva/Flight-Ticket-Reservation-System.git"
     },
   ];
 

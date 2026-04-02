@@ -1,11 +1,11 @@
 import { useCallback, useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import headerImg from "../assets/img/header-img.svg";
+import headerImg from "../assets/img/profile.jpg";  // 👈 rename your photo to profile.jpg
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
-const TO_ROTATE = ["Web Developer", "Cyber Security Undergraduate"];
+const TO_ROTATE = ["Web Developer", "cyber security Undergraduate"];
 const ROTATE_PERIOD = 2000;
 
 export const Banner = () => {
@@ -24,7 +24,9 @@ export const Banner = () => {
     setText(updatedText);
 
     if (isDeleting) {
-      setDelta((prevDelta) => prevDelta / 2);
+      setDelta(50);
+    } else {
+      setDelta(150);
     }
 
     if (!isDeleting && updatedText === fullText) {
@@ -32,8 +34,8 @@ export const Banner = () => {
       setDelta(ROTATE_PERIOD);
     } else if (isDeleting && updatedText === "") {
       setIsDeleting(false);
-      setLoopNum((prevLoopNum) => prevLoopNum + 1);
-      setDelta(500);
+      setLoopNum(loopNum + 1);
+      setDelta(300);
     }
   }, [isDeleting, loopNum, text]);
 
@@ -57,16 +59,16 @@ export const Banner = () => {
                 <h1>
                   {`Hi! I'm Hasindu Dinujaya`}
                   {' '}
-                  <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Cyber Security Undergraduate" ]'>
+                  <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "cyber security Undergraduate" ]'>
                     <span className="wrap">{text}</span>
                   </span>
                 </h1>
                   <p>
-                    I’m an undergraduate in cyber security and a web developer. I build responsive web
+                    I'm an undergraduate in cyber security and a web developer. I build responsive web
                     apps with HTML, CSS, React, JavaScript and Java, backed by solid MySQL database design.
                   </p>
                   <button onClick={() => { window.location.hash = "connect"; }}>
-                    Let’s Connect <ArrowRightCircle size={25} />
+                    Let's Connect <ArrowRightCircle size={25} />
                   </button>
               </div>}
             </TrackVisibility>
@@ -75,7 +77,21 @@ export const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                  <img src={headerImg} alt="Header Img"/>
+                  <img
+                    src={headerImg}
+                    alt="Hasindu Dinujaya"
+                    style={{
+                      width: "100%",
+                      maxWidth: "400px",
+                      height: "400px",
+                      objectFit: "cover",
+                      objectPosition: "top",
+                      borderRadius: "50%",
+                      border: "4px solid rgba(255, 255, 255, 0.2)",
+                      display: "block",
+                      margin: "0 auto"
+                    }}
+                  />
                 </div>}
             </TrackVisibility>
           </Col>
