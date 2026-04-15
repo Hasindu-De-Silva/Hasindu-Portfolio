@@ -16,8 +16,6 @@ export const Contact = () => {
   const [buttonText, setButtonText] = useState('Send');
   const [status, setStatus] = useState({});
 
-  const toEmail = "hasindudinujaya2003@gmail.com";
-
   const onFormUpdate = (category, value) => {
       setFormDetails({
         ...formDetails,
@@ -25,30 +23,50 @@ export const Contact = () => {
       })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setButtonText("Opening...");
-
-    const { firstName, lastName, email, phone, message } = formDetails;
-
-    if (!firstName || !lastName || !email || !message) {
-      setStatus({ success: false, message: "Please fill in your name, email, and message." });
-      setButtonText("Send");
+    
+    // Simple validation
+    if (!formDetails.firstName || !formDetails.email || !formDetails.message) {
+      setStatus({ success: false, message: "Please fill in all required fields." });
       return;
     }
 
-    const subject = encodeURIComponent(`Portfolio Contact - ${firstName} ${lastName}`);
-    const body = encodeURIComponent(
-      `Name: ${firstName} ${lastName}\nEmail: ${email}\nPhone: ${phone}\n\nMessage:\n${message}`
-    );
-    const mailtoLink = `mailto:${toEmail}?subject=${subject}&body=${body}`;
+    setButtonText("Sending...");
 
-    // This reliably works without needing a backend email sender.
-    window.location.href = mailtoLink;
+    const accessKey = "c432660c-b7dd-41bf-b4fd-9726fb1a8d2b";
 
-    setFormDetails(formInitialDetails);
-    setStatus({ success: true, message: "Opening your email client..." });
-    setButtonText("Send");
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          access_key: accessKey,
+          name: `${formDetails.firstName} ${formDetails.lastName}`,
+          email: formDetails.email,
+          phone: formDetails.phone,
+          message: formDetails.message,
+          subject: `New Contact Form Submission from ${formDetails.firstName}`
+        })
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setButtonText("Send");
+        setFormDetails(formInitialDetails);
+        setStatus({ success: true, message: "Message sent successfully!" });
+      } else {
+        throw new Error(result.message || "Failed to send message");
+      }
+    } catch (error) {
+      console.error(error);
+      setButtonText("Send");
+      setStatus({ success: false, message: "Something went wrong, please try again later." });
+    }
   };
 
   return (

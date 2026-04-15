@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://Hasindu-De-Silva.github.io/Hasindu-Portfolio",
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "animate.css": "^4.1.1",
     "bootstrap": "^5.3.3",
     "cors": "^2.8.5",

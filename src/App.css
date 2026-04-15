@@ -551,57 +551,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   box-shadow: 0 8px 25px rgba(0, 210, 255, 0.5);
 }
 
-/* Newsletter Css */
-.newsletter-bx {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 40px;
-  color: #fff;
-  padding: 60px 80px;
-  margin-bottom: 80px;
-  margin-top: -100px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-}
-.newsletter-bx h3 {
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  line-height: 1.2em;
-}
-.new-email-bx {
-  background: rgba(255,255,255,0.05);
-  padding: 5px;
-  border-radius: 30px;
-  display: flex;
-  align-items: center;
-  border: 1px solid rgba(255,255,255,0.1);
-}
-.new-email-bx input {
-  width: 100%;
-  color: #fff;
-  font-weight: 400;
-  background: transparent;
-  border: 0;
-  padding: 0 20px;
-}
-.new-email-bx input::placeholder {
-  color: #888;
-}
-.new-email-bx button {
-  background: linear-gradient(90.21deg, #00d2ff -5.91%, #3a7bd5 111.58%);
-  padding: 14px 40px;
-  color: #fff;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  border-radius: 25px;
-  box-shadow: 0 5px 15px rgba(0, 210, 255, 0.3);
-  transition: 0.3s ease;
-}
-.new-email-bx button:hover {
-  box-shadow: 0 8px 25px rgba(0, 210, 255, 0.5);
-}
-
 /* Footer Css */
 .footer {
   padding: 40px 0 30px 0;
